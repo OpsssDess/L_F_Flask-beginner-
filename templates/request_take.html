@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Take</title>
+</head>
+<body>
+    <section>
+        <h2>Подойдите к окну</h2>
+        {%if stock%}
+        <p>Возьмите {{take_good}}, в количестве 1</p>
+        <a href={{url_for('main_page')}}>Вернуться на главную</a>
+        {%else %}
+        <p>Сейчас на складе ничего нет</p>
+        <a href={{url_for('main_page')}}>Вернуться на главную</a>
+        {%endif%}
+    </section>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+    <body>
+        <section>
+            <h2>Регистрация прошения</h2>
+            <p>
+                <form action="/request/take" method="get">
+                <button type="submit">Взять.</button>
+                </form>
+            </p>
+        </section>
+        <section>
+            <h2>Регистрация пожертвования</h2>
+            <p>
+                <form action="/request/donation" method="post">
+                <label for="name">Какую вещь хотите отдать?</label>
+                <input type="text" name="name">
+                <label for="name">Сколько штук?</label>
+                <input type="text" name="amount">
+                <label for="name">Куда хотите положить (FIFO or LIFO?</label>
+                <input type="text" name="name_stock">
+                <button type="submit">Отправить</button>
+                </form>
+            </p>
+        </section>
+    </body>
+</html>
