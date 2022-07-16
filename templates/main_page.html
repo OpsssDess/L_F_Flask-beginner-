@@ -1,30 +1,40 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-</head>
-    <body>
-        <section>
-            <h2>Регистрация прошения</h2>
-            <p>
-                <form action="/request/take" method="get">
-                <button type="submit">Взять.</button>
-                </form>
-            </p>
-        </section>
-        <section>
-            <h2>Регистрация пожертвования</h2>
-            <p>
-                <form action="/request/donation" method="post">
-                <label for="name">Какую вещь хотите отдать?</label>
-                <input type="text" name="name">
-                <label for="name">Сколько штук?</label>
-                <input type="text" name="amount">
-                <label for="name">Куда хотите положить (FIFO or LIFO?</label>
-                <input type="text" name="name_stock">
-                <button type="submit">Отправить</button>
-                </form>
-            </p>
-        </section>
-    </body>
-</html>
+{% extends "base.html"%}
+{%block title%}{%endblock%}
+{%block content%}
+<div class="container">
+    <p class="lead">
+    Здесь можете пожерствовать любую вещь положив её в соответсвующую ячейку FIFO или LIFO.
+    </p>
+</div>
+<div class="container">
+    <h3>Регистрация прошения</h3>
+    <p>
+    <form action="/request/take" method="get">
+        <button type="submit" class="btn btn-primary">Взять.</button>
+    </form>
+    </p>
+</div>
+
+<div class="container">
+    <h3>Регистрация пожертвования</h3>
+    <p>
+    <form action="/request/donation" method="post">
+        <div class="mb-3">
+            <label for="name" class="form-label">Какую вещь хотите отдать?</label>
+            <input type="text" class="form-control" name="name">
+            <div id="emailHelp" class="form-text">Можно пожертвовать абсолютно любую вещь.</div>
+        </div>
+        <div class="mb-3">
+            <label for="name" class="form-label">Какое количество?</label>
+            <input type="text" class="form-control" name="amount">
+        </div>
+        <div class="mb-3">
+            <label for="name" class="form-label">Куда хотите отдать?</label>
+            <input type="text" class="form-control" name="name_stock">
+            <div id="stockHelp" class="form-text">Укажите FIFO или LIFO</div>
+        </div>
+        <button type="submit" class="btn btn-primary">Пожертвовать!</button>
+    </form>
+    </p>
+</div>
+{%endblock%}

@@ -1,13 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<section>
+{% extends "base.html"%}
+{%block title%}{%endblock%}
+{%block content%}
+<div class="container">
     <h2>Спасибо!!!</h2>
-    <a href= {{url_for('main_page')}} >Вернуться на главную</a>
-</section>
-</body>
-</html>
+</div>
+{%endblock%}

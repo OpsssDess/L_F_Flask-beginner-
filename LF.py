@@ -25,6 +25,8 @@ def ask_good():
     with open('good', mode="r", encoding='utf-8') as file:
         stock1 = json.load(file)
 
+    donation = {}
+
     if stock1:
         number_of_good = stock1[len(stock1) - 1]
         if number_of_good['amount'] == 1:
